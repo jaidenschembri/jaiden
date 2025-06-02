@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"build:gh-pages": "NODE_ENV=production vite build",
+		"build:gh-pages": "cross-env NODE_ENV=production vite build",
 		"preview": "vite preview",
 		"deploy": "npm run build:gh-pages && gh-pages -d build",
 		"prepare": "svelte-kit sync || echo ''",
@@ -29,6 +29,7 @@
 		"@tailwindcss/vite": "^4.0.0",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.4",
+		"cross-env": "^7.0.3",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",
