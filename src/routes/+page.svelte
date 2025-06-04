@@ -9,11 +9,11 @@
 			url: 'https://jaidenschembri.github.io/home/',
 			description: 'My forum'
 		},
-		{
-			title: 'JaidenOS',
-			url: 'https://jaidenschembri.github.io/jaiden-os/',
-			description: 'My OS'
-		},
+		// {
+		// 	title: 'JaidenOS',
+		// 	url: 'https://jaidenschembri.github.io/jaiden-os/',
+		// 	description: 'My OS'
+		// },
 		{
 			title: 'JaidenCLI',
 			url: 'https://jaidenschembri.github.io/cli-chat/',
@@ -22,7 +22,7 @@
 		{
 			title: 'JaidenWaifu',
 			url: 'https://jaidenschembri.github.io/vrm-chatbot/',
-			description: 'VRM Waifu chatbot'
+			description: 'VRM Waifu'
 		}
 	];
 
