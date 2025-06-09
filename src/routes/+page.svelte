@@ -11,7 +11,7 @@
 		},
 		{
 		title: 'JaidenOS',
-		url: 'https://jaidenschembri.github.io/jaiden-os/',
+		url: 'https://jaidenschembri.github.io/desktop-1/',
 		description: 'My OS'
 		},
 		{
