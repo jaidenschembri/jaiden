@@ -17,7 +17,7 @@
 		{
 			title: 'JaidenCLI',
 			url: 'https://jaidenschembri.github.io/cli-chat/',
-			description: 'In browser ai powered CLI fun'
+			description: 'In browser AI CLI fun'
 		},
 		{
 			title: 'JaidenWaifu',
