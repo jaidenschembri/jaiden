@@ -82,7 +82,6 @@
 
 		<!-- Social Links - Always on right -->
 		<div class="social-section">
-			<h2 class="section-label">connect</h2>
 			<div class="social-list">
 				{#each socialLinks as social}
 					<a 
@@ -91,6 +90,7 @@
 						target={social.url.startsWith('http') ? '_blank' : '_self'}
 						rel={social.url.startsWith('http') ? 'noopener noreferrer' : ''}
 						aria-label={social.name}
+						title={social.name}
 					>
 						<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
 							<path d={social.icon}/>
@@ -203,24 +203,30 @@
 
 	.social-list {
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
 		gap: 0.75rem;
-		align-items: flex-end;
+		justify-content: flex-end;
+		background-color: var(--bg-secondary);
+		padding: 1rem;
+		border-radius: 12px;
+		backdrop-filter: blur(10px);
+		border: 1px solid var(--border-secondary);
 	}
 
 	.social-link {
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
+		gap: 0.5rem;
 		text-decoration: none;
 		color: var(--text-secondary);
 		transition: all 0.2s ease;
-		padding: 0.5rem 0.75rem;
-		border: 1px solid transparent;
-		background-color: var(--bg-secondary);
-		backdrop-filter: blur(10px);
-		min-width: 120px;
-		justify-content: flex-end;
+		padding: 0.6rem 0.8rem;
+		border: 1px solid var(--border-secondary);
+		background-color: var(--bg-primary);
+		border-radius: 8px;
+		min-width: 44px;
+		height: 44px;
+		justify-content: center;
 	}
 
 	.social-link:hover {
@@ -242,9 +248,39 @@
 	.social-name {
 		font-size: 0.85rem;
 		font-weight: 400;
+		display: none;
 	}
 
-	/* Responsive Design - Keep similar layout */
+	/* Show social names on larger screens */
+	@media (min-width: 481px) {
+		.social-name {
+			display: inline;
+		}
+	}
+
+	/* Responsive Design */
+	@media (max-width: 992px) {
+		.content-layout {
+			flex-direction: column;
+			align-items: center;
+			gap: 2rem;
+		}
+
+		.projects-section,
+		.social-section {
+			width: 100%;
+			max-width: 500px;
+		}
+
+		.section-label {
+			text-align: center;
+		}
+
+		.social-list {
+			justify-content: center;
+		}
+	}
+
 	@media (max-width: 768px) {
 		.main-container {
 			padding: 1.5rem;
@@ -268,6 +304,7 @@
 
 		.social-list {
 			align-items: center;
+			justify-content: center;
 		}
 
 		.social-link {
@@ -281,6 +318,18 @@
 		.title-section {
 			margin-bottom: 2rem;
 		}
+
+		.projects-list {
+			width: 100%;
+		}
+
+		.social-section {
+			margin-top: 1.5rem;
+		}
+
+		.social-link {
+			padding: 0.6rem 0.8rem;
+		}
 	}
 
 	@media (max-width: 480px) {
@@ -289,16 +338,21 @@
 		}
 
 		.content-layout {
-			gap: 2rem;
+			gap: 1.5rem;
 		}
 
 		.social-link {
-			min-width: 100px;
-			padding: 0.5rem;
+			min-width: 44px;
+			padding: 0.6rem;
 		}
 
 		.social-name {
-			font-size: 0.8rem;
+			display: none;
+		}
+
+		.social-list {
+			padding: 0.75rem;
+			gap: 0.5rem;
 		}
 	}
 </style>
