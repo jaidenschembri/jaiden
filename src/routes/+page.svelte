@@ -7,7 +7,7 @@
 		{
 			title: 'JaidenChan',
 			url: 'https://jaidenschembri.github.io/home/',
-			description: 'My forum'
+			description: 'My forum/shop'
 		},
 		{
 		title: 'JaidenOS',
